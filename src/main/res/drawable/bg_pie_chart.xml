@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#333333" />
+        </shape>
+    </item>
+    <!-- Fake pie segments using arcs (simplified) -->
+    <item>
+        <shape android:shape="ring"
+            android:innerRadius="0dp"
+            android:thicknessRatio="2">
+            <solid android:color="#4CAF50" />
+        </shape>
+    </item>
+</layer-list>

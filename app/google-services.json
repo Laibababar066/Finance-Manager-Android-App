@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798604612365",
+    "project_id": "smd-project-3f2a7",
+    "storage_bucket": "smd-project-3f2a7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798604612365:android:10644a12dc8250c7ae9644",
+        "android_client_info": {
+          "package_name": "com.smd.penni"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrqvrGZPMdPfHdsYGMtmXEDe3KPSFwovw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

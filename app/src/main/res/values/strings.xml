@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Penni</string>
+    <string name="splash_title">Penni</string>
+    <string name="splash_subtitle">Budget &amp; spending — sign in to continue</string>
+    <string name="hint_display_name">Your name</string>
+    <string name="action_continue">Continue</string>
+    <string name="search_transactions_hint">Search transactions</string>
+    <string name="transaction_status_pending">Pending</string>
+    <string name="back">Back</string>
+    <string name="home_toolbar_format">Penni · %1$s</string>
+    <string name="profile_welcome_format">Hello, %1$s</string>
+    <string name="filter_by_category">Filter by category</string>
+    <string name="category_all">All categories</string>
+    <string name="stats_title">Spending overview</string>
+    <string name="stats_subtitle_format">Signed in as %1$s — sample stats for Assignment 2</string>
+    <string name="category_bills_utilities">Bills &amp; Utilities</string>
+    
+    <!-- Placeholder for Google Sign-In - REPLACE with real ID from Firebase Console -->
+    <string name="default_web_client_id">YOUR_CLIENT_ID_HERE.apps.googleusercontent.com</string>
+</resources>

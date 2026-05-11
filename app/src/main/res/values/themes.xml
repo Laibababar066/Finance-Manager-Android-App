@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Penni" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorSurface">#121212</item>
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:navigationBarColor">#1E1E1E</item>
+    </style>
+    <style name="Theme.Penni.Splash" parent="Theme.Penni">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

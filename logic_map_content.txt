@@ -1,0 +1,35 @@
+---
+LOGIC MAP — Assignment #04
+App Name: Penni
+Course: Software for Mobile and Devices
+
+REQUIREMENT MAPPING TABLE:
+
+| Req ID | Component              | Class/File                        | Method/Function          | Description                                                  | Reference |
+|--------|------------------------|-----------------------------------|--------------------------|--------------------------------------------------------------|-----------|
+| F1     | Firebase Auth          | AuthRepository.kt                 | signInWithGoogle()       | Exchanges Google OAuth token with Firebase Auth              | https://firebase.google.com/docs/auth/android/google-signin |
+| F1     | Firebase Auth          | AuthRepository.kt                 | signInWithEmailPassword()| Email/password authentication flow                          | https://firebase.google.com/docs/auth/android/password-auth |
+| F1     | Firebase Auth          | LoginActivity.kt                  | onCreate()               | Compose UI for login, session check on launch               | Firebase Auth Docs |
+| F2     | Firestore              | FirestoreHelper.kt                | syncUserData()           | Real-time snapshot listener on 'users' collection           | https://firebase.google.com/docs/firestore/query-data/listen |
+| F2     | Firestore              | FirestoreHelper.kt                | saveData()               | Saves document to Firestore using coroutines                | https://firebase.google.com/docs/firestore/manage-data/add-data |
+| F3     | FCM Notifications      | MyFirebaseMessagingService.kt     | onMessageReceived()      | Displays push notification using NotificationCompat         | https://firebase.google.com/docs/cloud-messaging/android/receive |
+| F3     | FCM Notifications      | MyFirebaseMessagingService.kt     | onNewToken()             | Saves FCM token to Firestore on refresh                     | https://firebase.google.com/docs/cloud-messaging/android/client |
+| F4     | Jetpack Compose        | LoginActivity.kt                  | LoginScreen()            | Composable login UI with email, password, Google Sign-In    | https://developer.android.com/jetpack/compose |
+| F4     | Jetpack Compose        | UserProfileScreen.kt              | ProfileScreen()          | Compose screen showing user profile from Firestore          | https://developer.android.com/jetpack/compose/state |
+| NF1    | Remote Config          | RemoteConfigHelper.kt             | fetchAndActivate()       | Fetches remote parameters and applies to UI at startup      | https://firebase.google.com/docs/remote-config/get-started?platform=android |
+| NF2    | Crashlytics/Analytics  | MyApp.kt                          | onCreate()               | Initializes Crashlytics and Analytics in Application class  | https://firebase.google.com/docs/crashlytics/get-started?platform=android |
+
+ARCHITECTURE OVERVIEW:
+- Pattern: MVVM (Model-View-ViewModel)
+- UI Layer: Fragments (existing) + Jetpack Compose (new screens)
+- Data Layer: Room DB (local, from A03) + Firebase Firestore (cloud, new)
+- Auth Layer: Firebase Authentication (Email + Google)
+- Notification Layer: Firebase Cloud Messaging
+- Observability: Firebase Crashlytics + Analytics
+- Remote Control: Firebase Remote Config
+- Async: Kotlin Coroutines + ViewModelScope throughout
+
+SELF-RESEARCHED FEATURES JUSTIFICATION:
+Feature A (Remote Config): Enables server-side control of app behavior without releasing a new APK. Official docs: https://firebase.google.com/docs/remote-config
+Feature B (Crashlytics + Analytics): Industry standard for monitoring app stability and user behavior. Official docs: https://firebase.google.com/docs/crashlytics
+---
